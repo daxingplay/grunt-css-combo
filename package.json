@@ -21,7 +21,7 @@
             "url": "https://github.com/daxingplay/grunt-css-combo/blob/master/LICENSE-MIT"
         }
     ],
-    "main": "Gruntfile.js",
+    "main": "grunt.js",
     "engines": {
         "node": ">= 0.8.0"
     },
@@ -35,6 +35,8 @@
         "grunt": "~0.4.0rc3"
     },
     "keywords": [
-        "gruntplugin"
+        "gruntplugin",
+        "css combo",
+        "css module compiler"
     ]
 }
