@@ -18,11 +18,7 @@ grunt.loadNpmTasks('grunt-css-combo');
 ```js
 grunt.initConfig({
 
-        meta:{
-            /* ·¢²¼°æ±¾ºÅ */
-            publish: 20120925
-        },
-        ksp:{
+        'css-combo':{
             file1:{
                 'target': 'xxx.source.css',
                 'output': 'xxx.css',
