@@ -28,7 +28,7 @@ var grunt = require('grunt');
  */
 
 exports['grunt-css-combo'] = {
-    setUp: function(done) {
+    'setUp': function(done) {
         // setup here
         done();
     },
