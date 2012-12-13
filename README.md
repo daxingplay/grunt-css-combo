@@ -18,21 +18,21 @@ grunt.loadNpmTasks('grunt-css-combo');
 ```js
 grunt.initConfig({
 
-        'css-combo':{
-            file1:{
-                'target': 'xxx.source.css',
-                'output': 'xxx.css',
-                'inputEncoding': 'utf-8',
-                'outputEncoding': 'gbk',
-                'compress': true,
-                'debug': false
-            },
+    'css-combo':{
+        file1:{
+            'target': 'xxx.source.css',
+            'output': 'xxx.css',
+            'inputEncoding': 'utf-8',
+            'outputEncoding': 'gbk',
+            'compress': true,
+            'debug': false
+        },
 
-            file2: {
-                ...
-            }
+        file2: {
+            ...
         }
-    });
+    }
+});
 ```
 然后我们可以便可以通过grunt命令来执行
 
