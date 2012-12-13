@@ -1,0 +1,40 @@
+{
+    "name": "grunt-css-combo",
+    "description": "Grunt plugin for CSS Combo, a css module combo tool.",
+    "version": "0.1.0",
+    "homepage": "https://github.com/daxingplay/grunt-css-combo",
+    "author": {
+        "name": "daxingplay",
+        "email": "daxingplay@gmail.com",
+        "url": "www.techcheng.com"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/daxingplay/grunt-css-combo.git"
+    },
+    "bugs": {
+        "url": "https://github.com/daxingplay/grunt-css-combo/issues"
+    },
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "https://github.com/daxingplay/grunt-css-combo/blob/master/LICENSE-MIT"
+        }
+    ],
+    "main": "Gruntfile.js",
+    "engines": {
+        "node": ">= 0.8.0"
+    },
+    "scripts": {
+        "test": "grunt test"
+    },
+    "devDependencies": {
+        "grunt-contrib-jshint": "~0.1.0",
+        "grunt-contrib-clean": "~0.4.0a",
+        "grunt-contrib-nodeunit": "~0.1.0",
+        "grunt": "~0.4.0rc3"
+    },
+    "keywords": [
+        "gruntplugin"
+    ]
+}
