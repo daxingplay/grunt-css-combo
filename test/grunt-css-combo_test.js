@@ -27,10 +27,13 @@ var grunt = require('grunt');
  test.ifError(value)
  */
 
-exports['grunt-css-combo'] = {
+exports['css-combo'] = {
     'setUp': function(done) {
         // setup here
         done();
+    },
+    'combine': function(test){
+        test.expect(1);
     },
     'helper': function(test) {
         test.expect(1);

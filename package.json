@@ -1,7 +1,7 @@
 {
     "name": "grunt-css-combo",
     "description": "Grunt plugin for CSS Combo, a css module combo tool.",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "homepage": "https://github.com/daxingplay/grunt-css-combo",
     "author": {
         "name": "daxingplay",
@@ -22,11 +22,15 @@
         }
     ],
     "main": "grunt.js",
+    "bin": "bin/grunt-css-combo",
     "engines": {
         "node": ">= 0.8.0"
     },
     "scripts": {
         "test": "grunt test"
+    },
+    "dependencies": {
+        "css-combo": "~0.2.5"
     },
     "devDependencies": {
         "grunt-contrib-jshint": "~0.1.0",
