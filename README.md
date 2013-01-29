@@ -1,19 +1,19 @@
 # grunt-css-combo
 
-[CSS Combo](https://github.com/daxingplay/css-combo)¹¤¾ßµÄ[grunt](https://github.com/gruntjs/grunt)²å¼ş
+[CSS Combo](https://github.com/daxingplay/css-combo)å·¥å…·çš„[grunt](https://github.com/gruntjs/grunt)æ’ä»¶
 
-## ÈçºÎ¿ªÊ¼
-ÔÚÖÕ¶ËÖĞ`cd`µ½ÄãµÄÏîÄ¿Ä¿Â¼£¨ÄãµÄ`grunt.js`ËùÔÚÄ¿Â¼£©£¬È»ºóÊ¹ÓÃ`npm install grunt-css-combo`À´°²×°²å¼ş
+## å¦‚ä½•å¼€å§‹
+åœ¨ç»ˆç«¯ä¸­`cd`åˆ°ä½ çš„é¡¹ç›®ç›®å½•ï¼ˆä½ çš„`grunt.js`æ‰€åœ¨ç›®å½•ï¼‰ï¼Œç„¶åä½¿ç”¨`npm install grunt-css-combo`æ¥å®‰è£…æ’ä»¶
 
-È»ºóÔÚÄãµÄÅäÖÃÎÄ¼ş `grunt.js` ÖĞÒıÈë¸Ã²å¼ş:
+ç„¶ååœ¨ä½ çš„é…ç½®æ–‡ä»¶ `grunt.js` ä¸­å¼•å…¥è¯¥æ’ä»¶:
 
 ```js
 grunt.loadNpmTasks('grunt-css-combo');
 ```
 
-## ÎÄµµ
+## æ–‡æ¡£
 
-Ê¹ÓÃºÜ¼òµ¥£¬Ö±½ÓÓÃCSS ComboµÄÅäÖÃ¼´¿É¡£ËùÒÔ½¨ÒéÄúÖ±½ÓÒÆ²½[CSS Combo](https://github.com/daxingplay/css-combo)µÄÎÄµµ.
+ä½¿ç”¨å¾ˆç®€å•ï¼Œç›´æ¥ç”¨CSS Comboçš„é…ç½®å³å¯ã€‚æ‰€ä»¥å»ºè®®æ‚¨ç›´æ¥ç§»æ­¥[CSS Combo](https://github.com/daxingplay/css-combo)çš„æ–‡æ¡£.
 
 ```js
 grunt.initConfig({
@@ -34,12 +34,12 @@ grunt.initConfig({
     }
 });
 ```
-È»ºóÎÒÃÇ¿ÉÒÔ±ã¿ÉÒÔÍ¨¹ıgruntÃüÁîÀ´Ö´ĞĞ
+ç„¶åæˆ‘ä»¬å¯ä»¥ä¾¿å¯ä»¥é€šè¿‡gruntå‘½ä»¤æ¥æ‰§è¡Œ
 
 ```bash
 $ grunt css-combo
 ```
-»òÕßÖ´ĞĞÆäÖĞµ¥¸ö
+æˆ–è€…æ‰§è¡Œå…¶ä¸­å•ä¸ª
 ```bash
 $ grunt css-combo:file1
 ```
