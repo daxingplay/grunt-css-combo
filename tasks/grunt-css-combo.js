@@ -11,12 +11,16 @@ module.exports = function(grunt) {
 
     grunt.registerMultiTask('css-combo', 'Compile your css modules using CSS Combo.', function() {
 //        grunt.log.write(grunt.helper('css-combo'));
+        var done = this.async();
+        this.data.target = path.resolve(this.data.target);
 
         CSSCombo.build(this.data, function(e, report){
             if(e){
                 grunt.log.fatal('Build error with file ' + report.target + ':' + e);
+                done(false);
             }else{
                 grunt.log.writeln('Build file ' + report.target + ' succeed.');
+                done(true);
             }
         });
     });
