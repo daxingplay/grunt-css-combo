@@ -13,7 +13,7 @@ grunt.loadNpmTasks('grunt-css-combo');
 
 ## 文档
 
-使用很简单，直接用CSS Combo的配置即可。所以建议您直接移步CSS Combo的文档[KSP](https://github.com/daxingplay/css-combo)的文档.
+使用很简单，直接用CSS Combo的配置即可。所以建议您直接移步[CSS Combo](https://github.com/daxingplay/css-combo)的文档.
 
 ```js
 grunt.initConfig({
