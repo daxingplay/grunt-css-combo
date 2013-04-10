@@ -1,5 +1,8 @@
 # grunt-css-combo
 
+[![Build Status](https://travis-ci.org/daxingplay/grunt-css-combo.png?branch=master)](https://travis-ci.org/daxingplay/grunt-css-combo)
+[![NPM version](https://badge.fury.io/js/grunt-css-combo.png)](http://badge.fury.io/js/grunt-css-combo)
+
 > Grunt plugin for css combo
 
 ## Getting Started
