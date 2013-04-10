@@ -1,49 +1,89 @@
 # grunt-css-combo
 
-[CSS Combo](https://github.com/daxingplay/css-combo)工具的[grunt](https://github.com/gruntjs/grunt)插件
+> Grunt plugin for css combo
 
-## 如何开始
-在终端中`cd`到你的项目目录（你的`grunt.js`所在目录），然后使用`npm install grunt-css-combo`来安装插件
+## Getting Started
+This plugin requires Grunt `~0.4.1`
 
-然后在你的配置文件 `grunt.js` 中引入该插件:
+If you haven't used [Grunt](http://gruntjs.com/) before, be sure to check out the [Getting Started](http://gruntjs.com/getting-started) guide, as it explains how to create a [Gruntfile](http://gruntjs.com/sample-gruntfile) as well as install and use Grunt plugins. Once you're familiar with that process, you may install this plugin with this command:
+
+```shell
+npm install grunt-css-combo --save-dev
+```
+
+One the plugin has been installed, it may be enabled inside your Gruntfile with this line of JavaScript:
 
 ```js
 grunt.loadNpmTasks('grunt-css-combo');
 ```
 
-## 文档
+## The "css_combo" task
 
-使用很简单，直接用CSS Combo的配置即可。所以建议您直接移步[CSS Combo](https://github.com/daxingplay/css-combo)的文档.
+### Overview
+In your project's Gruntfile, add a section named `css_combo` to the data object passed into `grunt.initConfig()`.
 
 ```js
 grunt.initConfig({
-
-    'css-combo':{
-        file1:{
-            'target': 'xxx.source.css',
-            'output': 'xxx.css',
-            'inputEncoding': 'utf-8',
-            'outputEncoding': 'gbk',
-            'compress': true,
-            'debug': false
-        },
-
-        file2: {
-            ...
-        }
-    }
-});
-```
-然后我们可以便可以通过grunt命令来执行
-
-```bash
-$ grunt css-combo
-```
-或者执行其中单个
-```bash
-$ grunt css-combo:file1
+  css_combo: {
+    options: {
+      // Task-specific options go here.
+    },
+    your_target: {
+      // Target-specific file lists and/or options go here.
+    },
+  },
+})
 ```
 
-## License
-Copyright (c) 2012 daxingplay
-Licensed under the MIT license.
+### Options
+
+#### options.separator
+Type: `String`
+Default value: `',  '`
+
+A string value that is used to do something with whatever.
+
+#### options.punctuation
+Type: `String`
+Default value: `'.'`
+
+A string value that is used to do something else with whatever else.
+
+### Usage Examples
+
+#### Default Options
+In this example, the default options are used to do something with whatever. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result would be `Testing, 1 2 3.`
+
+```js
+grunt.initConfig({
+  css_combo: {
+    options: {},
+    files: {
+      'dest/default_options': ['src/testing', 'src/123'],
+    },
+  },
+})
+```
+
+#### Custom Options
+In this example, custom options are used to do something else with whatever else. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result in this case would be `Testing: 1 2 3 !!!`
+
+```js
+grunt.initConfig({
+  css_combo: {
+    options: {
+      separator: ': ',
+      punctuation: ' !!!',
+    },
+    files: {
+      'dest/default_options': ['src/testing', 'src/123'],
+    },
+  },
+})
+```
+
+## Contributing
+In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
+
+## Release History
+_(Nothing yet)_

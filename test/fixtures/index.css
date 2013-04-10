@@ -1,0 +1,10 @@
+/**
+ * index.css
+ * @author: daxingplay<daxingplay@gmail.com>
+ * @date: 13-4-10
+ */
+
+@import "./mods/mod1.css";
+@import "./mods/mod2.css";
+
+#content {}

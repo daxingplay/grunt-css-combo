@@ -1,0 +1,39 @@
+/*
+combined files : 
+
+./mods/mod1.css
+./mods/mod2.css
+*/
+
+/**
+ * index.css
+ * @author: daxingplay<daxingplay@gmail.com>
+ * @date: 13-4-10
+ */
+
+
+/**
+ * mod1
+ * @author: daxingplay<daxingplay@gmail.com>
+ * @date: 13-4-10
+ */
+
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+
+/**
+ * mod2
+ * @author: daxingplay<daxingplay@gmail.com>
+ * @date: 13-4-10
+ */
+
+body {
+    background: #000;
+}
+
+
+#content {}
