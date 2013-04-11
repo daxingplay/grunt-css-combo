@@ -29,7 +29,8 @@ In your project's Gruntfile, add a section named `css_combo` to the data object 
 grunt.initConfig({
   css_combo: {
     options: {
-      // Task-specific options go here.
+      debug: false,
+      compress: false
     },
     your_target: {
       // Target-specific file lists and/or options go here.
@@ -40,50 +41,32 @@ grunt.initConfig({
 
 ### Options
 
-#### options.separator
-Type: `String`
-Default value: `',  '`
+#### options.debug
+Type: `Boolean`
+Default value: `false`
 
-A string value that is used to do something with whatever.
+Whether to turn on the debug logs or not.
 
 #### options.punctuation
-Type: `String`
-Default value: `'.'`
+Type: `Boolean`
+Default value: `false`
 
-A string value that is used to do something else with whatever else.
+Whether to compress css file or not. I recommend you to minify your css files using cssmin yourself.
 
 ### Usage Examples
-
-#### Default Options
-In this example, the default options are used to do something with whatever. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result would be `Testing, 1 2 3.`
 
 ```js
 grunt.initConfig({
   css_combo: {
     options: {},
     files: {
-      'dest/default_options': ['src/testing', 'src/123'],
+      'dest/index.combo.css': ['src/index.css'],
     },
   },
 })
 ```
 
-#### Custom Options
-In this example, custom options are used to do something else with whatever else. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result in this case would be `Testing: 1 2 3 !!!`
-
-```js
-grunt.initConfig({
-  css_combo: {
-    options: {
-      separator: ': ',
-      punctuation: ' !!!',
-    },
-    files: {
-      'dest/default_options': ['src/testing', 'src/123'],
-    },
-  },
-})
-```
+You can refer test/css_combo_test.js for example.
 
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
