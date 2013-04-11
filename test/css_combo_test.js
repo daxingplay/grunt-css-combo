@@ -1,7 +1,6 @@
 'use strict';
 
-var grunt = require('grunt'),
-    os = require('os');
+var grunt = require('grunt');
 
 /*
  ======== A Handy Little Nodeunit Reference ========
@@ -32,8 +31,8 @@ exports.css_combo = {
         test.expect(1);
 
         var actual = grunt.file.read('tmp/combo1.css');
-        var expected = grunt.file.read('test/expected/combo1.css').replace("\r\n", os.EOL);
-        test.equal(actual, expected, 'should combine css modules correctly.');
+        var expected = grunt.file.read('test/expected/combo1.css');
+        test.equal(grunt.util.normalizelf(actual), grunt.util.normalizelf(expected), 'should combine css modules correctly.');
 
         test.done();
     },
@@ -41,8 +40,8 @@ exports.css_combo = {
         test.expect(1);
 
         var actual = grunt.file.read('tmp/combo2.css');
-        var expected = grunt.file.read('test/expected/combo2.css').replace("\r\n", os.EOL);
-        test.equal(actual, expected, 'should combine css modules correctly.');
+        var expected = grunt.file.read('test/expected/combo2.css');
+        test.equal(grunt.util.normalizelf(actual), grunt.util.normalizelf(expected), 'should combine css modules correctly.');
 
         test.done();
     }
