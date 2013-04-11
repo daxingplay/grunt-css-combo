@@ -32,8 +32,8 @@ exports.css_combo = {
     test.expect(1);
 
     var actual = grunt.file.read('tmp/combo1.css');
-    var expected = grunt.file.read('test/expected/combo1.css');
-    test.equal(actual, expected, 'should describe what the default behavior is.');
+    var expected = grunt.file.read('test/expected/combo1.css').replace("\r\n", os.EOL);
+    test.equal(actual, expected, 'should combine css modules correctly.');
 
     test.done();
   },
@@ -42,7 +42,7 @@ exports.css_combo = {
 
     var actual = grunt.file.read('tmp/combo2.css');
     var expected = grunt.file.read('test/expected/combo2.css').replace("\r\n", os.EOL);
-    test.equal(actual, expected, 'should describe what the custom option(s) behavior is.');
+    test.equal(actual, expected, 'should combine css modules correctly.');
 
     test.done();
   }
