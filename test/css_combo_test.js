@@ -1,6 +1,7 @@
 'use strict';
 
-var grunt = require('grunt');
+var grunt = require('grunt'),
+    os = require('os');
 
 /*
   ======== A Handy Little Nodeunit Reference ========
@@ -40,9 +41,9 @@ exports.css_combo = {
     test.expect(1);
 
     var actual = grunt.file.read('tmp/combo2.css');
-    var expected = grunt.file.read('test/expected/combo2.css');
+    var expected = grunt.file.read('test/expected/combo2.css').replace("\r\n", os.EOL);
     test.equal(actual, expected, 'should describe what the custom option(s) behavior is.');
 
     test.done();
-  },
+  }
 };
