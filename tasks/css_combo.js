@@ -20,28 +20,34 @@ module.exports = function (grunt) {
         var options = this.options();
         var done = this.async();
 
-        // Iterate over all specified file groups.
-        this.files.forEach(function (f) {
-            // Concat specified files.
-            var src = f.src.filter(function (filepath) {
-                // Warn on and remove invalid source files (if nonull was set).
-                if (!grunt.file.exists(filepath)) {
-                    grunt.log.warn('Source file "' + filepath + '" not found.');
-                    return false;
-                } else {
-                    return true;
-                }
-            });
+        if( this.files.length > 0 ){
+            // Iterate over all specified file groups.
+            this.files.forEach(function (f) {
+                // Concat specified files.
+                var src = f.src.filter(function (filepath) {
+                    // Warn on and remove invalid source files (if nonull was set).
+                    if (!grunt.file.exists(filepath)) {
+                        grunt.log.warn('Source file "' + filepath + '" not found.');
+                        return false;
+                    } else {
+                        return true;
+                    }
+                });
 
-            csscombo.build(src, f.dest, options, function(err, report){
-                if(!err){
-                    // Print a success message.
-                    grunt.log.writeln('File "' + f.dest + '" created.');
-                }
-                done(!err);
-            });
+                csscombo.build(src, f.dest, options, function(err, report){
+                    if(!err){
+                        // Print a success message.
+                        grunt.log.writeln('File "' + f.dest + '" created.');
+                    }
+                    done(!err);
+                });
 
-        });
+            });
+        }
+        else {
+            // Print a success message.
+            grunt.log.writeln('No CSS file found.');
+            done();
+        }
     });
-
 };
