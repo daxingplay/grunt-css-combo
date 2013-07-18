@@ -4,3 +4,4 @@ tmp
 *.iml
 *.ipr
 *.bak
+.idea
