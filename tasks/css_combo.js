@@ -19,6 +19,7 @@ module.exports = function (grunt) {
         // Merge task-specific and/or target-specific options with these defaults.
         var options = this.options();
         var done = this.async();
+        var files = [];
 
         if( this.files.length > 0 ){
             // Iterate over all specified file groups.
@@ -34,15 +35,32 @@ module.exports = function (grunt) {
                     }
                 });
 
-                csscombo.build(src, f.dest, options, function(err, report){
-                    if(!err){
-                        // Print a success message.
-                        grunt.log.writeln('File "' + f.dest + '" created.');
-                    }
-                    done(!err);
+                src.forEach(function(s){
+                    files.push({
+                        src: s,
+                        dest: f.dest
+                    });
                 });
 
             });
+
+            var fileCount = files.length;
+            if(fileCount){
+                files.forEach(function(file){
+                    csscombo.build(file.src, file.dest, options, function(err, report){
+                        if(!err){
+                            // Print a success message.
+                            grunt.log.writeln('File "' + file.dest + '" created.');
+                        }else{
+                            grunt.log.warn('File "' + file.src + '" error: ' + err);
+                        }
+                        fileCount--;
+                        if(fileCount === 0){
+                            done();
+                        }
+                    });
+                });
+            }
         }
         else {
             // Print a success message.
